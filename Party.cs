@@ -56,4 +56,73 @@ class Party
     }
 
     // add new guest, sidan 4 i help kompendiumet
+    public bool AddNewGuest(string fistName, string lastName)
+    {
+        bool ok = true;
+        int vacantPos = FindVacantPosts();
+        if (vacantPos != -1)
+        {
+            guestList[vacantPos] = FullName(fistName, lastName);
+
+        }
+    }
+
+    private string FullName(string firstName, string lastName)
+    {
+        return lastName.ToUpper() + ", " + firstName;
+    }
+
+    private int FindVacantPos()
+    {
+        int vacantPos = -1;
+        for (int index = 0; index < guestList.Length; index++)
+        {
+            if (string.IsNullOrEmpty (guestList[index]))
+            {
+                vacantPos = index;
+                break;
+
+            }
+
+        }
+        return vacantPos;
+    }
+
+    public int Count
+    {
+        get { return NumberOfGuests(); }
+    }
+
+    public double CalcTotalCost()
+    {
+        int numOfGuests = NumberOfGuests();
+        double totalCost = numOfGuests * costPerCapita;
+        return totalCost;
+    }
+
+    public string[] GetGuestList()
+    {
+        int size = NumberOfGuests();
+
+        if (size <=0)
+        {
+            return null;
+        }
+
+        string[] guests = new string[size];
+        for (int i = 0, j=0; i < guestList.Length; i++)
+        {
+            if (!string.IsNullOrEmpty(guestList[i]))
+            {
+                guests[j++] = guestList[i];
+            }
+        }
+        return guests;
+    }
+
+    public bool CheckIndex (int index)
+    {
+        return (index >= 0) && (index < guestList.Length);
+
+    }
 }
