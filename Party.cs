@@ -36,7 +36,7 @@ class Party
             {
                 numGuests++;
             }
-           
+
         }
         return numGuests;
     }
@@ -65,8 +65,18 @@ class Party
             guestList[vacantPos] = FullName(fistName, lastName);
 
         }
+        return ok;
     }
 
+
+    /// <summary>
+    /// 
+    /// this method adds first name w. lastname and converts lastname to <!---->
+    /// letters.
+    /// </summary>
+    /// <param name="firstName"></param>
+    /// <param name="lastName"></param> to UPPER
+    /// <returns></returns>
     private string FullName(string firstName, string lastName)
     {
         return lastName.ToUpper() + ", " + firstName;
@@ -77,7 +87,7 @@ class Party
         int vacantPos = -1;
         for (int index = 0; index < guestList.Length; index++)
         {
-            if (string.IsNullOrEmpty (guestList[index]))
+            if (string.IsNullOrEmpty(guestList[index]))
             {
                 vacantPos = index;
                 break;
@@ -104,13 +114,13 @@ class Party
     {
         int size = NumberOfGuests();
 
-        if (size <=0)
+        if (size <= 0)
         {
             return null;
         }
 
         string[] guests = new string[size];
-        for (int i = 0, j=0; i < guestList.Length; i++)
+        for (int i = 0, j = 0; i < guestList.Length; i++)
         {
             if (!string.IsNullOrEmpty(guestList[i]))
             {
@@ -120,9 +130,32 @@ class Party
         return guests;
     }
 
-    public bool CheckIndex (int index)
+    public bool CheckIndex(int index)
     {
         return (index >= 0) && (index < guestList.Length);
+
+    }
+
+    public string GetItemAt(int index)
+    {
+        if (CheckIndex(index))
+        {
+            return guestList[index];
+
+        }
+        return null;
+
+    }
+
+    public bool DeleteAt(int index)
+    {
+        if (CheckIndex(index))
+        {
+            guestList[index] = string.Empty;
+            return true;
+        }
+        else
+            return false;
 
     }
 }

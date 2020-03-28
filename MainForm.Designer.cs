@@ -224,9 +224,9 @@
             this.lblTotalCost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblTotalCost.Location = new System.Drawing.Point(212, 404);
             this.lblTotalCost.Name = "lblTotalCost";
-            this.lblTotalCost.Size = new System.Drawing.Size(79, 15);
+            this.lblTotalCost.Size = new System.Drawing.Size(103, 15);
             this.lblTotalCost.TabIndex = 8;
-            this.lblTotalCost.Text = "Information xxx";
+            this.lblTotalCost.Text = "Not inplemented yet";
             // 
             // lblNumberOfGuests
             // 
@@ -234,9 +234,9 @@
             this.lblNumberOfGuests.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblNumberOfGuests.Location = new System.Drawing.Point(212, 436);
             this.lblNumberOfGuests.Name = "lblNumberOfGuests";
-            this.lblNumberOfGuests.Size = new System.Drawing.Size(60, 15);
+            this.lblNumberOfGuests.Size = new System.Drawing.Size(105, 15);
             this.lblNumberOfGuests.TabIndex = 9;
-            this.lblNumberOfGuests.Text = "information";
+            this.lblNumberOfGuests.Text = "Not implemented yet";
             // 
             // MainForm
             // 
