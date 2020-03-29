@@ -128,7 +128,7 @@ class Party
             }
         }
         return guests;
-    }
+    } 
 
     public bool CheckIndex(int index)
     {
@@ -156,6 +156,19 @@ class Party
         }
         else
             return false;
+    }
+
+    public bool ChangeAt(int index, string firstName, string lastName)
+    {
+        bool ok = false;
+        if (CheckIndex(index))
+        {
+            guestList[index] = FullName(firstName, lastName);
+        }
+        else
+            ok = true;
+
+        return ok;
 
     }
 }

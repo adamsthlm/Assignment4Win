@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.grBoxNewParty = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblCostPerPerson = new System.Windows.Forms.Label();
             this.lbltotalNumber = new System.Windows.Forms.Label();
-            this.CR_List_Button = new System.Windows.Forms.Button();
+            this.btnCreateParty = new System.Windows.Forms.Button();
             this.grBoxAddGuest = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.txtLastname = new System.Windows.Forms.TextBox();
@@ -54,11 +54,11 @@
             // 
             // grBoxNewParty
             // 
-            this.grBoxNewParty.Controls.Add(this.textBox2);
+            this.grBoxNewParty.Controls.Add(this.txtAmount);
             this.grBoxNewParty.Controls.Add(this.textBox1);
             this.grBoxNewParty.Controls.Add(this.lblCostPerPerson);
             this.grBoxNewParty.Controls.Add(this.lbltotalNumber);
-            this.grBoxNewParty.Controls.Add(this.CR_List_Button);
+            this.grBoxNewParty.Controls.Add(this.btnCreateParty);
             this.grBoxNewParty.Location = new System.Drawing.Point(25, 42);
             this.grBoxNewParty.Name = "grBoxNewParty";
             this.grBoxNewParty.Size = new System.Drawing.Size(413, 150);
@@ -67,12 +67,12 @@
             this.grBoxNewParty.Text = "New Party";
             this.grBoxNewParty.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
-            // textBox2
+            // txtAmount
             // 
-            this.textBox2.Location = new System.Drawing.Point(208, 59);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtAmount.Location = new System.Drawing.Point(208, 59);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtAmount.TabIndex = 4;
             // 
             // textBox1
             // 
@@ -99,15 +99,15 @@
             this.lbltotalNumber.TabIndex = 1;
             this.lbltotalNumber.Text = "Total number of guests";
             // 
-            // CR_List_Button
+            // btnCreateParty
             // 
-            this.CR_List_Button.Location = new System.Drawing.Point(142, 98);
-            this.CR_List_Button.Name = "CR_List_Button";
-            this.CR_List_Button.Size = new System.Drawing.Size(102, 30);
-            this.CR_List_Button.TabIndex = 0;
-            this.CR_List_Button.Text = "Create List";
-            this.CR_List_Button.UseVisualStyleBackColor = true;
-            this.CR_List_Button.Click += new System.EventHandler(this.CR_List_Button_Click);
+            this.btnCreateParty.Location = new System.Drawing.Point(142, 98);
+            this.btnCreateParty.Name = "btnCreateParty";
+            this.btnCreateParty.Size = new System.Drawing.Size(102, 30);
+            this.btnCreateParty.TabIndex = 0;
+            this.btnCreateParty.Text = "Create List";
+            this.btnCreateParty.UseVisualStyleBackColor = true;
+            this.btnCreateParty.Click += new System.EventHandler(this.btnCreateParty_Click);
             // 
             // grBoxAddGuest
             // 
@@ -131,6 +131,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // txtLastname
             // 
@@ -271,10 +272,10 @@
         private System.Windows.Forms.GroupBox grBoxAddGuest;
         private System.Windows.Forms.ListBox listAllGuests;
         private System.Windows.Forms.Label lblGuestList;
-        private System.Windows.Forms.Button CR_List_Button;
+        private System.Windows.Forms.Button btnCreateParty;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblCostPerPerson;
         private System.Windows.Forms.Label lbltotalNumber;
