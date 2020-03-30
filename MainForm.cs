@@ -27,14 +27,7 @@ namespace Assignment4Win
 
         }
 
-        //private void CR_List_Button_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-
-
-        private void btnCreateParty_Click(object sender, EventArgs e)
+        private void BtnCreateParty_Click(object sender, EventArgs e)
         {
             bool maxNumOK = CreateParty();
             if (!maxNumOK)
@@ -43,11 +36,6 @@ namespace Assignment4Win
             }
         }
 
-
-
-
-
-        // ****************************************************************************************** problem*******************************************
 
         private bool CreateParty()
         {
@@ -67,28 +55,59 @@ namespace Assignment4Win
             return ok;
         }
 
-        private bool ReadCostPerPerson()
+        private bool ReadCostPerPerson
         {
-            bool ok = true;
+            get
+            {
+                bool ok = true;
 
-            if (double.TryParse(txtAmount.Text, out double amount) && (amount != 0.0))
-            {
-                party.CostPerCapita = amount;
+                if (double.TryParse(txtAmount.Text, out double amount) && (amount != 0.0))
+                {
+                    party.CostPerCapita = amount;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid amount. Please try again.");
+                    return false;
+                }
+                return ok;
             }
-            else
-            {
-                MessageBox.Show("Invalid amount. Please try again.");
-                return false;
-            }
-            return ok;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             if (TrimNames())
             {
+                bool ok = party.AddNewGuest(txtfirstName.Text, txtLastname.Text);
+                if (!ok)
+                {
+                    MessageBox.Show("List is full! New guest not added!", "Error");
 
+                }
+                else
+                    UpdateGUI();
             }
+        }
+
+        private void UpdateGUI()
+        {
+            listAllGuests.Items.Clear();
+            string[] guestList = party.GetGuestList();
+            if (guestList != null)
+            {
+                for (int i = 0; i < guestList.Length; i++)
+                {
+                    string str = $"{i + 1,4} {guestList[i],-20}";
+                    listAllGuests.Items.Add(str);
+
+                }
+            }
+            else
+                return;
+
+            double totalCost = party.CalcTotalCost();
+            lblTotalCost.Text = totalCost.ToString();
+            lblNumberOfGuests.Text = party.Count.ToString();
         }
 
         private bool TrimNames()
@@ -107,7 +126,7 @@ namespace Assignment4Win
 
             if (string.IsNullOrEmpty(text))
             {
-                MessageBox.Show("Please provide both the first name and the second");
+                MessageBox.Show("Please provide both the first name AND last");
                 return false;
             }
             else

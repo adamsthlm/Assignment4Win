@@ -7,7 +7,7 @@ e-mail: ak7764@mau.se
 class Party
 {
     private double costPerCapita;
-    private string[] guestList;
+    private readonly string[] guestList;
 
     //constructor
     public Party(int maxNumOfGuests)
@@ -70,7 +70,6 @@ class Party
 
 
     /// <summary>
-    /// 
     /// this method adds first name w. lastname and converts lastname to <!---->
     /// letters.
     /// </summary>

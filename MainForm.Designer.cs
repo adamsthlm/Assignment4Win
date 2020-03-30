@@ -46,8 +46,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.lblTotalCost = new System.Windows.Forms.Label();
             this.lblNumberOfGuests = new System.Windows.Forms.Label();
+            this.lblTotalCost = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.grBoxNewParty.SuspendLayout();
             this.grBoxAddGuest.SuspendLayout();
             this.SuspendLayout();
@@ -107,7 +108,7 @@
             this.btnCreateParty.TabIndex = 0;
             this.btnCreateParty.Text = "Create List";
             this.btnCreateParty.UseVisualStyleBackColor = true;
-            this.btnCreateParty.Click += new System.EventHandler(this.btnCreateParty_Click);
+            this.btnCreateParty.Click += new System.EventHandler(this.BtnCreateParty_Click);
             // 
             // grBoxAddGuest
             // 
@@ -131,7 +132,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Add";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // txtLastname
             // 
@@ -219,16 +220,6 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Number of guests";
             // 
-            // lblTotalCost
-            // 
-            this.lblTotalCost.AutoSize = true;
-            this.lblTotalCost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblTotalCost.Location = new System.Drawing.Point(212, 404);
-            this.lblTotalCost.Name = "lblTotalCost";
-            this.lblTotalCost.Size = new System.Drawing.Size(103, 15);
-            this.lblTotalCost.TabIndex = 8;
-            this.lblTotalCost.Text = "Not inplemented yet";
-            // 
             // lblNumberOfGuests
             // 
             this.lblNumberOfGuests.AutoSize = true;
@@ -239,13 +230,29 @@
             this.lblNumberOfGuests.TabIndex = 9;
             this.lblNumberOfGuests.Text = "Not implemented yet";
             // 
+            // lblTotalCost
+            // 
+            this.lblTotalCost.AutoSize = true;
+            this.lblTotalCost.Location = new System.Drawing.Point(212, 403);
+            this.lblTotalCost.Name = "lblTotalCost";
+            this.lblTotalCost.Size = new System.Drawing.Size(0, 13);
+            this.lblTotalCost.TabIndex = 10;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(580, 114);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.flowLayoutPanel1.TabIndex = 11;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 529);
-            this.Controls.Add(this.lblNumberOfGuests);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lblTotalCost);
+            this.Controls.Add(this.lblNumberOfGuests);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
@@ -286,8 +293,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblTotalCost;
         private System.Windows.Forms.Label lblNumberOfGuests;
+        private System.Windows.Forms.Label lblTotalCost;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
