@@ -42,7 +42,7 @@ namespace Assignment4Win
 
             bool ok = true;
 
-            if (int.TryParse(txtAmount.Text, out int maxNumber) && (maxNumber >= 0))
+            if (int.TryParse(textBox1.Text, out int maxNumber) && (maxNumber >= 0))
             {
                 party = new Party(maxNumber);
                 MessageBox.Show($"Party list with space for {maxNumber} ");

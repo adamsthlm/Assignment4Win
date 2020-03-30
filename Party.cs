@@ -7,7 +7,7 @@ e-mail: ak7764@mau.se
 class Party
 {
     private double costPerCapita;
-    private readonly string[] guestList;
+    private string[] guestList;
 
     //constructor
     public Party(int maxNumOfGuests)
@@ -70,16 +70,13 @@ class Party
 
 
     /// <summary>
-    /// this method adds first name w. lastname and converts lastname to <!---->
+    /// This method adds first name w. lastname and converts lastname to <!---->
     /// letters.
     /// </summary>
     /// <param name="firstName"></param>
     /// <param name="lastName"></param> to UPPER
     /// <returns></returns>
-    private string FullName(string firstName, string lastName)
-    {
-        return lastName.ToUpper() + ", " + firstName;
-    }
+    private string FullName(string firstName, string lastName) => lastName.ToUpper() + ", " + firstName;
 
     private int FindVacantPos()
     {
@@ -90,7 +87,6 @@ class Party
             {
                 vacantPos = index;
                 break;
-
             }
 
         }
