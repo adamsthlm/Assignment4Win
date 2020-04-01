@@ -107,6 +107,8 @@ class Party
 
     public string[] GetGuestList()
     {
+       
+        
         int size = NumberOfGuests();
 
         if (size <= 0)

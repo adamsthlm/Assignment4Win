@@ -134,5 +134,14 @@ namespace Assignment4Win
                 return true;
             }
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            // Need to implement delete after_click
+            party.DeleteAt(listAllGuests.SelectedIndex);
+            UpdateGUI();
+            // Hurray!!!
+
+        }
     }
 }
