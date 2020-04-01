@@ -5,3 +5,7 @@ Man vill helst inte kolla på videon, även fast det verkar som om man får gör
 är kurslitteraturen ännu bättre än kursen, kanske. Fortsättningen ska bli spännande.
 
 Tyvärr ligger jag efter hela tilden, tur att deadline:en är borttagen annnars hade jag nog inte hunnit.
+
+Det börjar likna något, nu kan man ta bort personer ur listan.
+
+
