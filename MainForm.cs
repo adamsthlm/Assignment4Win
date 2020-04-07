@@ -104,10 +104,14 @@ namespace Assignment4Win
             }
             else
                 return;
-
-            double totalCost = party.CalcTotalCost();
-            string theCostAsString = totalCost.ToString();
-            lblTotalCost.Text = theCostAsString;
+           
+            if (ReadCostPerPerson)
+            {
+                double totalCost = party.CalcTotalCost();
+                string theCostAsString = totalCost.ToString();
+                lblTotalCost.Text = theCostAsString;
+            }
+          
             lblNumberOfGuests.Text = party.Count.ToString();
         }
 
