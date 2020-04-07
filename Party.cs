@@ -101,7 +101,8 @@ class Party
     public double CalcTotalCost()
     {
         int numOfGuests = NumberOfGuests();
-        double totalCost = numOfGuests * costPerCapita;
+        double costper = CostPerCapita;
+        double totalCost = numOfGuests * costper;
         return totalCost;
     }
 

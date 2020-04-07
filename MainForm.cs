@@ -106,7 +106,8 @@ namespace Assignment4Win
                 return;
 
             double totalCost = party.CalcTotalCost();
-            lblTotalCost.Text = totalCost.ToString();
+            string theCostAsString = totalCost.ToString();
+            lblTotalCost.Text = theCostAsString;
             lblNumberOfGuests.Text = party.Count.ToString();
         }
 
@@ -137,10 +138,28 @@ namespace Assignment4Win
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            // Need to implement delete after_click
-            party.DeleteAt(listAllGuests.SelectedIndex);
-            UpdateGUI();
-            // Hurray!!!
+            // Här behöver jag hantera om ingen lista är skapad
+
+
+            try
+            {
+                party.DeleteAt(listAllGuests.SelectedIndex);
+                UpdateGUI();
+                // Hurray!!!
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Please create a guestlist first!");
+                InitializeGUI();
+               // throw;
+            }
+            
+
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
 
         }
     }

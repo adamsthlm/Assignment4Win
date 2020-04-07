@@ -227,17 +227,18 @@
             this.lblNumberOfGuests.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblNumberOfGuests.Location = new System.Drawing.Point(212, 436);
             this.lblNumberOfGuests.Name = "lblNumberOfGuests";
-            this.lblNumberOfGuests.Size = new System.Drawing.Size(105, 15);
+            this.lblNumberOfGuests.Size = new System.Drawing.Size(15, 15);
             this.lblNumberOfGuests.TabIndex = 9;
-            this.lblNumberOfGuests.Text = "Not implemented yet";
+            this.lblNumberOfGuests.Text = "0";
             // 
             // lblTotalCost
             // 
             this.lblTotalCost.AutoSize = true;
             this.lblTotalCost.Location = new System.Drawing.Point(212, 403);
             this.lblTotalCost.Name = "lblTotalCost";
-            this.lblTotalCost.Size = new System.Drawing.Size(0, 13);
+            this.lblTotalCost.Size = new System.Drawing.Size(13, 13);
             this.lblTotalCost.TabIndex = 10;
+            this.lblTotalCost.Text = "0";
             // 
             // flowLayoutPanel1
             // 
@@ -265,6 +266,7 @@
             this.Name = "MainForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Party Organizer by Extremist programmer Carl-Adam Berglund v1.02 alfa";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.grBoxNewParty.ResumeLayout(false);
             this.grBoxNewParty.PerformLayout();
             this.grBoxAddGuest.ResumeLayout(false);
