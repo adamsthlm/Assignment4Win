@@ -78,14 +78,26 @@ namespace Assignment4Win
         {
             if (TrimNames())
             {
-                bool ok = party.AddNewGuest(txtfirstName.Text, txtLastname.Text);
-                if (!ok)
+                try
                 {
-                    MessageBox.Show("List is full! New guest not added!", "Error");
+                    bool ok = party.AddNewGuest(txtfirstName.Text, txtLastname.Text);
+                    if (!ok)
+                    {
+                        MessageBox.Show("List is full! New guest not added!", "Error");
 
+                    }
+                    else
+                        UpdateGUI();
                 }
-                else
-                    UpdateGUI();
+
+
+
+                catch (NullReferenceException)
+                {
+                    MessageBox.Show("Please create a list first!");
+                    InitializeGUI();
+                    //throw;
+                }
             }
         }
 
