@@ -48,7 +48,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lblNumberOfGuests = new System.Windows.Forms.Label();
             this.lblTotalCost = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.grBoxNewParty.SuspendLayout();
             this.grBoxAddGuest.SuspendLayout();
             this.SuspendLayout();
@@ -240,19 +239,11 @@
             this.lblTotalCost.TabIndex = 10;
             this.lblTotalCost.Text = "0";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(580, 114);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.flowLayoutPanel1.TabIndex = 11;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 529);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lblTotalCost);
             this.Controls.Add(this.lblNumberOfGuests);
             this.Controls.Add(this.label7);
@@ -298,7 +289,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblNumberOfGuests;
         private System.Windows.Forms.Label lblTotalCost;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
